@@ -2,7 +2,7 @@ import socket
 
 HOST = '127.0.0.1'
 PORT = 5001
-CLIENT_NAME = "Client of Bard (Testing Mode)"
+CLIENT_NAME = "Bharadwaj"
 
 def start_client():
     try:

@@ -3,7 +3,7 @@ import threading
 
 HOST = '127.0.0.1'
 PORT = 5001
-SERVER_NAME = "Server of Gemini"
+SERVER_NAME = "Server"
 SERVER_NUMBER = 42
 
 def handle_client(conn, addr):
