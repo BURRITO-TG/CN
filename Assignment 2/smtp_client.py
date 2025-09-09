@@ -5,8 +5,8 @@ def smtp_client():
     smtp_server = "smtp.gmail.com"
     port = 587  # For starttls
     sender_email = "toletibharat@gmail.com"
-    password = "sqjb dmik hcdd zrib"
-    receiver_email = "prathitasree@gmail.com"
+    password = "**** **** **** ****"
+    receiver_email = "gondianirudh15@gmail.com"
 
     # Create the email message
     message_subject = "CN Lab 2 SMTP Test"
