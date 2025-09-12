@@ -30,14 +30,10 @@ def dns_client():
                 log.write("Domain does not exist.\n")
                 break # No need to check other records if domain doesn't exist
             except Exception as e:
-                # CNAME query for a base domain often fails, which is normal.
-                # A more specific query like 'www.google.com' would work.
                 print(f"  Could not resolve {record_type}: {e}")
                 log.write(f"Could not resolve: {e}\n")
 
     print(f"\n--- All query results logged to '{log_file}' ---")
 
 if __name__ == "__main__":
-    # You need to install the dnspython library first:
-    # pip install dnspython
     dns_client()
