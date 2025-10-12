@@ -1,7 +1,8 @@
 import time
 import random
 
-LOSS_PROBABILITY=0.4
+LOSS_PROBABILITY=0.67
+TIMEOUT_DURATION=1
 
 def receiver(frame_data):
     """A receiver that accepts and acknowledges the frame it gets."""
@@ -36,14 +37,23 @@ def sender():
     while next_frame_to_send < total_frames:
         print(f"SENDER: Sending Frame {next_frame_to_send}...")
         received_ack = network_simulation(next_frame_to_send)
-        print(f"SENDER: Received ACK {received_ack}")
-        if(received_ack == next_frame_to_send):
-            print(f"SENDER: ACK {received_ack} is correct. Moving to next frame.\n")
-            next_frame_to_send += 1
-        else:
-            print(f"SENDER: Incorrect or no ACK.\n")
-        time.sleep(1.5)
-    print("SENDER: All frames sent and acknowledged.")
+        start_time = time.time()
+        
+        while received_ack is None or received_ack != next_frame_to_send:
+            if time.time() - start_time > TIMEOUT_DURATION:
+                print(f"SENDER: Timeout! Frame {next_frame_to_send} or its ACK lost.")
+                print(f"SENDER: Retransmitting Frame {next_frame_to_send}...\n")
+                
+                received_ack = network_simulation(next_frame_to_send)
+                start_time = time.time()
+            
+            time.sleep(0.1)
+
+        print(f"SENDER: ACK {received_ack} received correctly.\n")
+        next_frame_to_send += 1
+        time.sleep(1)
+        
+    print("SENDER: All frames sent and acknowledged successfully.")
 
 if __name__ == "__main__":
     sender()
