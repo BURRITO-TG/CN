@@ -211,3 +211,115 @@ SENDER: Sending Frame 9...
 SENDER: Received ACK 10. Sliding window base.
 
 SENDER: All frames sent and acknowledged successfully.
+
+Starting TCP Congestion Control Simulation...
+Initial State: cwnd = 1, ssthresh = 64
+
+Round 1: In Slow Start. cwnd grows exponentially from 1 to 2.
+Round 2: In Slow Start. cwnd grows exponentially from 2 to 4.
+Round 3: In Slow Start. cwnd grows exponentially from 4 to 8.
+Round 4: In Slow Start. cwnd grows exponentially from 8 to 16.
+Round 5: In Slow Start. cwnd grows exponentially from 16 to 32.
+Round 6: In Slow Start. cwnd grows exponentially from 32 to 64.
+Round 7: In Congestion Avoidance. cwnd grows linearly from 64 to 65.
+Round 8: In Congestion Avoidance. cwnd grows linearly from 65 to 66.
+Round 9: In Congestion Avoidance. cwnd grows linearly from 66 to 67.
+Round 10: In Congestion Avoidance. cwnd grows linearly from 67 to 68.
+Round 11: In Congestion Avoidance. cwnd grows linearly from 68 to 69.
+Round 12: In Congestion Avoidance. cwnd grows linearly from 69 to 70.
+Round 13: In Congestion Avoidance. cwnd grows linearly from 70 to 71.
+Round 14: In Congestion Avoidance. cwnd grows linearly from 71 to 72.
+Round 15: In Congestion Avoidance. cwnd grows linearly from 72 to 73.
+Round 16: In Congestion Avoidance. cwnd grows linearly from 73 to 74.
+Round 17: In Congestion Avoidance. cwnd grows linearly from 74 to 75.
+Round 18: In Congestion Avoidance. cwnd grows linearly from 75 to 76.
+Round 19: In Congestion Avoidance. cwnd grows linearly from 76 to 77.
+Round 20: In Congestion Avoidance. cwnd grows linearly from 77 to 78.
+Round 21: In Congestion Avoidance. cwnd grows linearly from 78 to 79.
+Round 22: In Congestion Avoidance. cwnd grows linearly from 79 to 80.
+Round 23: In Congestion Avoidance. cwnd grows linearly from 80 to 81.
+Round 24: In Congestion Avoidance. cwnd grows linearly from 81 to 82.
+Round 25: In Congestion Avoidance. cwnd grows linearly from 82 to 83.
+Round 26: In Congestion Avoidance. cwnd grows linearly from 83 to 84.
+Round 27: In Congestion Avoidance. cwnd grows linearly from 84 to 85.
+Round 28: In Congestion Avoidance. cwnd grows linearly from 85 to 86.
+Round 29: In Congestion Avoidance. cwnd grows linearly from 86 to 87.
+--- Round 30: PACKET LOSS DETECTED! ---
+Action: Multiplicative Decrease. New ssthresh = 43, cwnd reset to 1.
+
+Round 31: In Slow Start. cwnd grows exponentially from 1 to 2.
+Round 32: In Slow Start. cwnd grows exponentially from 2 to 4.
+Round 33: In Slow Start. cwnd grows exponentially from 4 to 8.
+Round 34: In Slow Start. cwnd grows exponentially from 8 to 16.
+Round 35: In Slow Start. cwnd grows exponentially from 16 to 32.
+Round 36: In Slow Start. cwnd grows exponentially from 32 to 64.
+Round 37: In Congestion Avoidance. cwnd grows linearly from 64 to 65.
+Round 38: In Congestion Avoidance. cwnd grows linearly from 65 to 66.
+Round 39: In Congestion Avoidance. cwnd grows linearly from 66 to 67.
+Round 40: In Congestion Avoidance. cwnd grows linearly from 67 to 68.
+Round 41: In Congestion Avoidance. cwnd grows linearly from 68 to 69.
+Round 42: In Congestion Avoidance. cwnd grows linearly from 69 to 70.
+Round 43: In Congestion Avoidance. cwnd grows linearly from 70 to 71.
+Round 44: In Congestion Avoidance. cwnd grows linearly from 71 to 72.
+Round 45: In Congestion Avoidance. cwnd grows linearly from 72 to 73.
+Round 46: In Congestion Avoidance. cwnd grows linearly from 73 to 74.
+Round 47: In Congestion Avoidance. cwnd grows linearly from 74 to 75.
+Round 48: In Congestion Avoidance. cwnd grows linearly from 75 to 76.
+Round 49: In Congestion Avoidance. cwnd grows linearly from 76 to 77.
+Round 50: In Congestion Avoidance. cwnd grows linearly from 77 to 78.
+Round 51: In Congestion Avoidance. cwnd grows linearly from 78 to 79.
+Round 52: In Congestion Avoidance. cwnd grows linearly from 79 to 80.
+Round 53: In Congestion Avoidance. cwnd grows linearly from 80 to 81.
+Round 54: In Congestion Avoidance. cwnd grows linearly from 81 to 82.
+Round 55: In Congestion Avoidance. cwnd grows linearly from 82 to 83.
+Round 56: In Congestion Avoidance. cwnd grows linearly from 83 to 84.
+Round 57: In Congestion Avoidance. cwnd grows linearly from 84 to 85.
+Round 58: In Congestion Avoidance. cwnd grows linearly from 85 to 86.
+Round 59: In Congestion Avoidance. cwnd grows linearly from 86 to 87.
+--- Round 60: PACKET LOSS DETECTED! ---
+Action: Multiplicative Decrease. New ssthresh = 43, cwnd reset to 1.
+
+Round 61: In Slow Start. cwnd grows exponentially from 1 to 2.
+Round 62: In Slow Start. cwnd grows exponentially from 2 to 4.
+Round 63: In Slow Start. cwnd grows exponentially from 4 to 8.
+Round 64: In Slow Start. cwnd grows exponentially from 8 to 16.
+Round 65: In Slow Start. cwnd grows exponentially from 16 to 32.
+Round 66: In Slow Start. cwnd grows exponentially from 32 to 64.
+Round 67: In Congestion Avoidance. cwnd grows linearly from 64 to 65.
+Round 68: In Congestion Avoidance. cwnd grows linearly from 65 to 66.
+Round 69: In Congestion Avoidance. cwnd grows linearly from 66 to 67.
+Round 70: In Congestion Avoidance. cwnd grows linearly from 67 to 68.
+Round 71: In Congestion Avoidance. cwnd grows linearly from 68 to 69.
+Round 72: In Congestion Avoidance. cwnd grows linearly from 69 to 70.
+Round 73: In Congestion Avoidance. cwnd grows linearly from 70 to 71.
+Round 74: In Congestion Avoidance. cwnd grows linearly from 71 to 72.
+Round 75: In Congestion Avoidance. cwnd grows linearly from 72 to 73.
+Round 76: In Congestion Avoidance. cwnd grows linearly from 73 to 74.
+Round 77: In Congestion Avoidance. cwnd grows linearly from 74 to 75.
+Round 78: In Congestion Avoidance. cwnd grows linearly from 75 to 76.
+Round 79: In Congestion Avoidance. cwnd grows linearly from 76 to 77.
+Round 80: In Congestion Avoidance. cwnd grows linearly from 77 to 78.
+Round 81: In Congestion Avoidance. cwnd grows linearly from 78 to 79.
+Round 82: In Congestion Avoidance. cwnd grows linearly from 79 to 80.
+Round 83: In Congestion Avoidance. cwnd grows linearly from 80 to 81.
+Round 84: In Congestion Avoidance. cwnd grows linearly from 81 to 82.
+Round 85: In Congestion Avoidance. cwnd grows linearly from 82 to 83.
+Round 86: In Congestion Avoidance. cwnd grows linearly from 83 to 84.
+Round 87: In Congestion Avoidance. cwnd grows linearly from 84 to 85.
+Round 88: In Congestion Avoidance. cwnd grows linearly from 85 to 86.
+Round 89: In Congestion Avoidance. cwnd grows linearly from 86 to 87.
+--- Round 90: PACKET LOSS DETECTED! ---
+Action: Multiplicative Decrease. New ssthresh = 43, cwnd reset to 1.
+
+Round 91: In Slow Start. cwnd grows exponentially from 1 to 2.
+Round 92: In Slow Start. cwnd grows exponentially from 2 to 4.
+Round 93: In Slow Start. cwnd grows exponentially from 4 to 8.
+Round 94: In Slow Start. cwnd grows exponentially from 8 to 16.
+Round 95: In Slow Start. cwnd grows exponentially from 16 to 32.
+Round 96: In Slow Start. cwnd grows exponentially from 32 to 64.
+Round 97: In Congestion Avoidance. cwnd grows linearly from 64 to 65.
+Round 98: In Congestion Avoidance. cwnd grows linearly from 65 to 66.
+Round 99: In Congestion Avoidance. cwnd grows linearly from 66 to 67.
+Round 100: In Congestion Avoidance. cwnd grows linearly from 67 to 68.
+
+Plot has been saved to cwnd_plot.png
