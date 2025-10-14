@@ -1,0 +1,213 @@
+stop n wait
+SENDER: Starting to send frames...
+
+SENDER: Sending Frame 0...
+NETWORK: >> Oh no! The frame was lost! <<
+SENDER: Timeout! Frame 0 or its ACK lost.
+SENDER: Retransmitting Frame 0...
+
+    RECEIVER: Received Frame 0
+    RECEIVER: Sending ACK 0
+NETWORK: >> Oh! no! The ACK was lost! <<
+SENDER: Timeout! Frame 0 or its ACK lost.
+SENDER: Retransmitting Frame 0...
+
+NETWORK: >> Oh no! The frame was lost! <<
+SENDER: Timeout! Frame 0 or its ACK lost.
+SENDER: Retransmitting Frame 0...
+
+    RECEIVER: Received Frame 0
+    RECEIVER: Sending ACK 0
+NETWORK: >> Oh! no! The ACK was lost! <<
+SENDER: Timeout! Frame 0 or its ACK lost.
+SENDER: Retransmitting Frame 0...
+
+NETWORK: >> Oh no! The frame was lost! <<
+SENDER: Timeout! Frame 0 or its ACK lost.
+SENDER: Retransmitting Frame 0...
+
+    RECEIVER: Received Frame 0
+    RECEIVER: Sending ACK 0
+SENDER: ACK 0 received correctly.
+
+SENDER: Sending Frame 1...
+NETWORK: >> Oh no! The frame was lost! <<
+SENDER: Timeout! Frame 1 or its ACK lost.
+SENDER: Retransmitting Frame 1...
+
+NETWORK: >> Oh no! The frame was lost! <<
+SENDER: Timeout! Frame 1 or its ACK lost.
+SENDER: Retransmitting Frame 1...
+
+    RECEIVER: Received Frame 1
+    RECEIVER: Sending ACK 1
+SENDER: ACK 1 received correctly.
+
+SENDER: Sending Frame 2...
+NETWORK: >> Oh no! The frame was lost! <<
+SENDER: Timeout! Frame 2 or its ACK lost.
+SENDER: Retransmitting Frame 2...
+
+    RECEIVER: Received Frame 2
+    RECEIVER: Sending ACK 2
+NETWORK: >> Oh! no! The ACK was lost! <<
+SENDER: Timeout! Frame 2 or its ACK lost.
+SENDER: Retransmitting Frame 2...
+
+NETWORK: >> Oh no! The frame was lost! <<
+SENDER: Timeout! Frame 2 or its ACK lost.
+SENDER: Retransmitting Frame 2...
+
+NETWORK: >> Oh no! The frame was lost! <<
+SENDER: Timeout! Frame 2 or its ACK lost.
+SENDER: Retransmitting Frame 2...
+
+    RECEIVER: Received Frame 2
+    RECEIVER: Sending ACK 2
+SENDER: ACK 2 received correctly.
+
+SENDER: Sending Frame 3...
+    RECEIVER: Received Frame 3
+    RECEIVER: Sending ACK 3
+NETWORK: >> Oh! no! The ACK was lost! <<
+SENDER: Timeout! Frame 3 or its ACK lost.
+SENDER: Retransmitting Frame 3...
+
+    RECEIVER: Received Frame 3
+    RECEIVER: Sending ACK 3
+SENDER: ACK 3 received correctly.
+
+SENDER: Sending Frame 4...
+NETWORK: >> Oh no! The frame was lost! <<
+SENDER: Timeout! Frame 4 or its ACK lost.
+SENDER: Retransmitting Frame 4...
+
+NETWORK: >> Oh no! The frame was lost! <<
+SENDER: Timeout! Frame 4 or its ACK lost.
+SENDER: Retransmitting Frame 4...
+
+NETWORK: >> Oh no! The frame was lost! <<
+SENDER: Timeout! Frame 4 or its ACK lost.
+SENDER: Retransmitting Frame 4...
+
+    RECEIVER: Received Frame 4
+    RECEIVER: Sending ACK 4
+SENDER: ACK 4 received correctly.
+
+SENDER: All frames sent and acknowledged successfully.
+
+
+go back no
+
+SENDER: Starting Go-Back-N with unreliable network.
+
+SENDER: Timer started for Frame 0.
+SENDER: Sending Frame 0...
+                RECEIVER: Received Frame 0. Expecting 0.
+                RECEIVER: Frame 0 accepted.
+                RECEIVER: Sending cumulative ACK 1.
+SENDER: Sending Frame 1...
+                RECEIVER: Received Frame 1. Expecting 1.
+                RECEIVER: Frame 1 accepted.
+                RECEIVER: Sending cumulative ACK 2.
+SENDER: Sending Frame 2...
+                RECEIVER: Received Frame 2. Expecting 2.
+                RECEIVER: Frame 2 accepted.
+                RECEIVER: Sending cumulative ACK 3.
+SENDER: Received ACK 3. Sliding window base.
+SENDER: Timer started for Frame 3.
+SENDER: Sending Frame 3...
+SENDER: Sending Frame 4...
+                RECEIVER: Received Frame 4. Expecting 3.
+                RECEIVER: Sending cumulative ACK 3.
+SENDER: Sending Frame 5...
+                RECEIVER: Received Frame 5. Expecting 3.
+                RECEIVER: Sending cumulative ACK 3.
+SENDER: Received ACK 3. Sliding window base.
+SENDER: Sending Frame 6...
+                RECEIVER: Received Frame 6. Expecting 3.
+                RECEIVER: Sending cumulative ACK 3.
+SENDER: Window full. Waiting for ACKs or timeout...
+SENDER: Window full. Waiting for ACKs or timeout...
+
+SENDER: [TIMEOUT!] for Frame 3. The alarm clock rang!
+SENDER: --- GOING BACK to Frame {base} ---
+
+SENDER: Timer started for Frame 3.
+SENDER: Sending Frame 3...
+                RECEIVER: Received Frame 3. Expecting 3.
+                RECEIVER: Frame 3 accepted.
+                RECEIVER: Sending cumulative ACK 4.
+SENDER: Received ACK 4. Sliding window base.
+SENDER: Timer started for Frame 4.
+SENDER: Sending Frame 4...
+SENDER: Sending Frame 5...
+SENDER: Sending Frame 6...
+                RECEIVER: Received Frame 6. Expecting 4.
+                RECEIVER: Sending cumulative ACK 4.
+SENDER: Received ACK 4. Sliding window base.
+SENDER: Sending Frame 7...
+                RECEIVER: Received Frame 7. Expecting 4.
+                RECEIVER: Sending cumulative ACK 4.
+SENDER: Received ACK 4. Sliding window base.
+SENDER: Window full. Waiting for ACKs or timeout...
+SENDER: Window full. Waiting for ACKs or timeout...
+SENDER: Window full. Waiting for ACKs or timeout...
+
+SENDER: [TIMEOUT!] for Frame 4. The alarm clock rang!
+SENDER: --- GOING BACK to Frame {base} ---
+
+SENDER: Timer started for Frame 4.
+SENDER: Sending Frame 4...
+                RECEIVER: Received Frame 4. Expecting 4.
+                RECEIVER: Frame 4 accepted.
+                RECEIVER: Sending cumulative ACK 5.
+SENDER: Sending Frame 5...
+                RECEIVER: Received Frame 5. Expecting 5.
+                RECEIVER: Frame 5 accepted.
+                RECEIVER: Sending cumulative ACK 6.
+SENDER: Received ACK 6. Sliding window base.
+SENDER: Timer started for Frame 6.
+SENDER: Sending Frame 6...
+                RECEIVER: Received Frame 6. Expecting 6.
+                RECEIVER: Frame 6 accepted.
+                RECEIVER: Sending cumulative ACK 7.
+SENDER: Received ACK 7. Sliding window base.
+SENDER: Timer started for Frame 7.
+SENDER: Sending Frame 7...
+                RECEIVER: Received Frame 7. Expecting 7.
+                RECEIVER: Frame 7 accepted.
+                RECEIVER: Sending cumulative ACK 8.
+SENDER: Sending Frame 8...
+                RECEIVER: Received Frame 8. Expecting 8.
+                RECEIVER: Frame 8 accepted.
+                RECEIVER: Sending cumulative ACK 9.
+SENDER: Received ACK 9. Sliding window base.
+SENDER: Timer started for Frame 9.
+SENDER: Sending Frame 9...
+SENDER: Window full. Waiting for ACKs or timeout...
+SENDER: Window full. Waiting for ACKs or timeout...
+SENDER: Window full. Waiting for ACKs or timeout...
+
+SENDER: [TIMEOUT!] for Frame 9. The alarm clock rang!
+SENDER: --- GOING BACK to Frame {base} ---
+
+SENDER: Timer started for Frame 9.
+SENDER: Sending Frame 9...
+                RECEIVER: Received Frame 9. Expecting 9.
+                RECEIVER: Frame 9 accepted.
+                RECEIVER: Sending cumulative ACK 10.
+SENDER: Window full. Waiting for ACKs or timeout...
+SENDER: Window full. Waiting for ACKs or timeout...
+SENDER: Window full. Waiting for ACKs or timeout...
+
+SENDER: [TIMEOUT!] for Frame 9. The alarm clock rang!
+SENDER: --- GOING BACK to Frame {base} ---
+
+SENDER: Timer started for Frame 9.
+SENDER: Sending Frame 9...
+                RECEIVER: Received Frame 9. Expecting 10.
+                RECEIVER: Sending cumulative ACK 10.
+SENDER: Received ACK 10. Sliding window base.
+
+SENDER: All frames sent and acknowledged successfully.
