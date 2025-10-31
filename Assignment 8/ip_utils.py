@@ -41,23 +41,32 @@ def ip_to_binary(ip_address: str) -> str:
 
 # (Continuing in ip_utils.py)
 
+# (Continuing in ip_utils.py)
+
+# (ip_to_binary function is up here)
+
 def get_network_prefix(ip_cidr: str) -> str:
     """
     Takes a CIDR notation string and returns the network prefix as a binary string.
     """
     
-    # 1. Split the CIDR string "200.23.16.0/23" into the IP and the prefix length
-    #    ip_address will be "200.23.16.0"
-    #    prefix_len_str will be "23"
+    # 1. Split the CIDR string
     try:
         ip_address, prefix_len_str = ip_cidr.split('/')
     except ValueError:
         print("Error: Invalid CIDR format. Expected 'IP/Prefix'.")
-        return "" # Return empty string on error
+        return ""
 
-    print(f"The IP part is: {ip_address}")
-    print(f"The prefix length string is: {prefix_len_str}")
+    # 2. Convert the prefix length string "23" to an integer 23
+    prefix_len = int(prefix_len_str)
     
-    # --- We will add more code here ---
+    # 3. Use our function from Part 1 to get the full 32-bit binary IP
+    #    (This is why we built it first!)
+    full_binary_ip = ip_to_binary(ip_address)
+    
+    print(f"The full 32-bit binary IP is: {full_binary_ip}")
+    print(f"The prefix length to get is: {prefix_len}")
+
+    # --- We will add the final step next ---
     
     return "" # For now
