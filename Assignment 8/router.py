@@ -27,7 +27,26 @@ class Router:
         print(f"Internal Forwarding Table: {self.forwarding_table}")
 
     def _build_forwarding_table(self, routes: list):
-        pass
+        """
+        Processes the human-readable routes list into an internal,
+        sorted, binary format for fast lookups.
+        """
+        
+        processed_table = []
+        
+        for route_tuple in routes:
+            cidr = route_tuple[0]
+            link = route_tuple[1]
+            
+            binary_prefix = get_network_prefix(cidr)
+            
+            prefix_len = len(binary_prefix)
+            
+            processed_table.append( (binary_prefix, prefix_len, link) )
+        
+        processed_table.sort(key=lambda item: item[1], reverse=True)
+
+        self.forwarding_table = processed_table
 
     def route_packet(self, dest_ip: str) -> str:
         pass
